@@ -1,0 +1,100 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div><h1>
+        {% for move in scramble %}
+        {{move}}
+        {% endfor %}
+</h1></div>
+<p>
+<div class = "split">
+
+    <div class="page-grid">
+        <div class="grid-container"></div>
+
+        <div class="grid-container">
+            {% for row in top %}
+                {% for color in row %}
+                    <div class="{{color}}"> .</div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+
+        <div class="grid-container"></div>
+        <div class="grid-container"></div>
+
+        <div class="grid-container">
+            {% for row in left %}
+                {% for color in row %}
+                    <div class="{{color}}"> .</div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+
+        <div class="grid-container">
+            {% for row in front %}
+                {% for color in row %}
+                    <div class="{{color}}"> .</div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+
+        <div class="grid-container">
+            {% for row in right %}
+                {% for color in row %}
+                    <div class="{{color}}"> .</div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+
+        <div class="grid-container">
+            {% for row in back %}
+                {% for color in row %}
+                    <div class="{{color}}"> .</div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+
+        <div class="grid-container"></div>
+
+        <div class="grid-container">
+            {% for row in bottom %}
+                {% for color in row %}
+                    <div class="{{color}}"> .</div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+
+        <div class="grid-container"></div>
+        <div class="grid-container"></div>
+    </div>
+
+
+    <div id="container">
+        <div id="display">
+            00:00:00
+            </div>
+        <div id="buttons">
+            <center>
+                <button id="startStop" class="btn btn-primary" onclick="startStop()">Start</button> <button id="reset" class="btn btn-secondary" onclick="reset()">Reset</button>
+            </center>
+        </div>
+
+        <p></p>
+        <p></p>
+
+
+        <div class="form-group">
+            <form action="/" method="post">
+                <center>
+                <label class="col-form-label" for="inputDefault"></label>
+                <input id="length" name="length" type="number" min="0" class="form-control" placeholder="Length" size="2">
+                <button type="submit" class="btn btn-primary">Change</button>
+            </form>
+        </div>
+    </div>
+</div>
+</p>
+
+{% endblock %}
