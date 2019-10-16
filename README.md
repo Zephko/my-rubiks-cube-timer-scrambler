@@ -1,3 +1,5 @@
+See a video demo: https://www.youtube.com/watch?v=5MRbWZxNbcY&feature=youtu.be
+
 My CS50 Final Project is a cube scramble generator and timer web app. This is something that can be used when competing with other
 speedcubers or when trying to improve your solve times on a specific scramble.
 
